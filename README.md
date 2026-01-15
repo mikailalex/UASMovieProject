@@ -1,5 +1,4 @@
 # Capstone Movie Project
-[![CircleCI](https://circleci.com/gh/mikailalex/CapstoneMovieProject.svg?style=svg)](https://circleci.com/gh/mikailalex/CapstoneMovieProject)
 
 📱 **Capstone Movie Project** - Aplikasi Mobile untuk UAS Pemrograman Mobile
 
