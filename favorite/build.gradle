@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.dynamic-feature'
+    id 'kotlin-android'
+}
+
+apply from: '../shareddependencies.gradle'
+
+android {
+    namespace 'com.bumiayu.dicoding.favorite'
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 21
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+        freeCompilerArgs += ["-opt-in=kotlin.RequiresOptIn"]
+    }
+}
+
+dependencies {
+    implementation project(":core")
+    implementation project(":app")
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}
