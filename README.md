@@ -1,35 +1,90 @@
-# CapstoneMovieProject
-[![CircleCI](https://circleci.com/gh/mikailalex/CapstoneMovieProject.svg?style=svg)](circleci.com/pipelines/github/mikailalex/CapstoneMovieProject)
+# Capstone Movie Project
+[![CircleCI](https://circleci.com/gh/mikailalex/CapstoneMovieProject.svg?style=svg)](https://circleci.com/gh/mikailalex/CapstoneMovieProject)
 
-This is last submission from dicoding class "Menjadi Android Developer Expert"
+📱 **Capstone Movie Project** - Aplikasi Mobile untuk UAS Pemrograman Mobile
 
-This app is useful for showing popular, currently airing, highest rated movies and tv shows, etc. the database comes from https://www.themoviedb.org/ the data of movies and tv shows that have been shown will be stored in local storage and can be viewed offline. There is also a favorite feature to display your favorite movies or TV shows that you have marked
+📋 **Deskripsi Proyek**
+Aplikasi Android ini dikembangkan sebagai proyek Ujian Akhir Semester (UAS) untuk mata kuliah Pemrograman Mobile. Aplikasi ini bertujuan untuk menampilkan informasi film dan acara TV terbaru, populer, dan berperingkat tinggi dengan memanfaatkan API dari [The Movie Database (TMDB)](https://www.themoviedb.org/).
 
+✨ **Fitur Utama**
+✅ **Daftar Film & TV Show:** Menampilkan katalog film dan acara TV berdasarkan kategori populer, sedang tayang, dan rating tertinggi.
 
-Some of the things this app applies
+✅ **Fitur Favorit:** Pengguna dapat menandai film atau acara TV sebagai favorit yang disimpan secara lokal.
 
-  -Kotlin
+✅ **Akses Offline:** Data yang telah dimuat akan disimpan dalam database lokal sehingga tetap dapat dilihat tanpa koneksi internet.
 
-  -MVVM using Clean Architecture
-  
-  -Pagination = Unlimited scrolling
-  
-  -Reactive Programming = Coroutine Flow
-  
-  -Dependency Injection = Koin
-  
-  -Modularization = Android library "core" and dynamic feature "favorite"
-  
-  -Security = Request network with certificate pinning, SQLite / local database encrypt with SQLite Chipper, obfuscate
-  
-  -ViewBinding, retrofit, room, glide, etc
+✅ **Pencarian:** Memudahkan pengguna mencari judul film atau acara TV tertentu.
 
-# Certificate
+✅ **Keamanan Data:** Implementasi Certificate Pinning untuk koneksi jaringan dan enkripsi database menggunakan SQLCipher.
 
-https://www.dicoding.com/certificates/MRZMG2D60ZYQ
+🛠 **Teknologi yang Digunakan**
+*   **Bahasa Pemrograman:** Kotlin
+*   **Minimum SDK:** API 21 (Android 5.0 Lollipop)
+*   **Arsitektur:** MVVM dengan Clean Architecture & Modularization
+*   **Library Utama:**
+    *   **Retrofit** - Untuk integrasi API/Networking.
+    *   **Room Database** - Untuk penyimpanan data lokal (dengan SQLCipher).
+    *   **Koin** - Untuk Dependency Injection.
+    *   **Coroutine Flow** - Untuk Reactive Programming.
+    *   **Glide** - Untuk pemrosesan dan loading gambar.
+    *   **ViewBinding** - Untuk interaksi dengan layout UI.
 
-![gambar](https://user-images.githubusercontent.com/67632360/123537592-6ebf6e80-d75a-11eb-8d91-99c74877b608.png)
+📁 **Struktur Proyek**
+Proyek ini menggunakan pendekatan **Modularization**:
+```text
+.
+├── app/                # Layer Presentasi (UI Utama, Activity, Fragment, ViewModel)
+├── core/               # Layer Data & Domain (Repository, Database, API, Use Cases)
+└── favorite/           # Dynamic Feature Module (Fitur Favorit)
+```
 
-# Preview
+🚀 **Cara Menjalankan Proyek**
+1.  **Clone repository**
+    ```bash
+    git clone https://github.com/mikailalex/CapstoneMovieProject.git
+    ```
+2.  **Buka di Android Studio**
+    *   Pastikan menggunakan versi terbaru (Rekomendasi: Arctic Fox atau lebih baru).
+    *   Tunggu hingga proses Gradle sync selesai.
+3.  **Konfigurasi environment**
+    *   Aplikasi ini memerlukan API Key dari TMDB.
+    *   Tambahkan `BASE_URL` dan konfigurasi API lainnya jika diperlukan di `gradle.properties` atau melalui `BuildConfig`.
+4.  **Build dan Run**
+    *   Pilih perangkat/emulator.
+    *   Klik tombol **Run** atau tekan `Shift + F10`.
 
+📸 **Screenshots & Demo**
 ![Demo](https://user-images.githubusercontent.com/67632360/123531199-b6c79c80-d72c-11eb-9923-bbb8949062fc.gif)
+
+📝 **Dokumentasi Fitur**
+1.  **Clean Architecture**
+    Memisahkan kode menjadi layer Data, Domain, dan Presentation untuk meningkatkan *testability* dan *maintainability*.
+2.  **Dynamic Feature Module**
+    Modul `favorite` diimplementasikan sebagai *dynamic feature* untuk mengoptimalkan ukuran APK awal.
+3.  **Database Encryption**
+    Menggunakan **SQLCipher** untuk memastikan data lokal yang disimpan dalam Room Database aman terenkripsi.
+
+🧪 **Testing**
+```bash
+# Menjalankan unit tests
+./gradlew test
+
+# Menjalankan instrumented tests
+./gradlew connectedAndroidTest
+```
+
+📊 **Hasil Implementasi**
+| Komponen | Status | Keterangan |
+| :--- | :--- | :--- |
+| CRUD Operations | ✅ Selesai | Menggunakan Room Database & SQLCipher |
+| API Integration | ✅ Selesai | Menggunakan Retrofit & TMDB API |
+| Architecture | ✅ Selesai | MVVM + Clean Architecture |
+| Security | ✅ Selesai | Certificate Pinning & Obfuscation |
+
+🤝 **Kontributor**
+*   **M Mikail Alexander Firdaus - 42422045** - Developer & Student
+*   **Muhammad Faran Rikhul Barqi - 42422035** - Developer & Student
+
+📄 **Lisensi**
+Copyright 2024 Capstone Movie Project
+Lisensi: [MIT License](https://opensource.org/licenses/MIT)
