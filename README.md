@@ -83,6 +83,7 @@ Proyek ini menggunakan pendekatan **Modularization**:
 🤝 **Kontributor**
 *   **M Mikail Alexander Firdaus - 42422045** - Developer & Student
 *   **Muhammad Faran Rikhul Barqi - 42422035** - Developer & Student
+*   **Arda Priambada - 42422012** - Developer & Student
 
 📄 **Lisensi**
 Copyright 2024 Capstone Movie Project
